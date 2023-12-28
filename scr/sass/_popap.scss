@@ -1,0 +1,244 @@
+.popup-header {
+  width: 100%;
+
+  @media screen and (width > 767px) {
+    width: 100%;
+    /* height: 120px; */
+    display: flex;
+    /* margin: 0px 0 25px 0; */
+    padding: 80px 0 25px 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
+.popup-header-list {
+  display: flex;
+  width: 200px;
+  //justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 7%;
+
+  @media screen and (width > 767px) {
+    width: 100%;
+    justify-content: space-between;
+    gap: 5%;
+  }
+}
+
+.popup-close-svg{
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.popup-header-items {
+
+  @media screen and (width > 767px) {
+
+  }
+}
+.popup-header-title {
+  color: #8F7D65;
+  font-family: Cormorant Garamond;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  &:hover{
+    color: $dark-red;
+  }
+  @media screen and (width > 767px) {
+
+  }
+}
+.popup-content {
+  display: block;
+  @media screen and (width > 767px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.popup-img{
+  width: 320px;
+  height: 484.848px;
+  flex-shrink: 0;
+  @media screen and (width > 767px) {
+  padding: 40px 0 70px 0;
+  width: 396px;
+  height: 600px;
+  }
+}
+.popup-content-text {
+  display: flex;
+  width: 320px;
+  padding: 40px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  @media screen and (width > 767px) {
+    display: flex;
+    width: 627px;
+    flex-direction: column;
+    //align-items: flex-end;
+    gap: 40px;
+    padding: 80px 0 70px 0;
+  }
+}
+.popup-p1{
+  color: $dark-brown;
+  font-family: Barlow Condensed;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+
+}
+.popup-p2{
+  color: $dark-brown;
+  text-align: justify;
+  font-family: Barlow Condensed;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+
+}
+.popup-h3,
+summary {
+  color: $dark-beige;
+  font-family: Cormorant Garamond;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  &:hover {
+   color: $dark-red;
+  }
+}
+details > p{
+  color: $dark-brown;
+  text-align: justify;
+  font-family: Barlow Condensed;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  padding: 25px 25px 10px 25px;
+}
+.hero-button {
+
+  @media screen and (width > 767px) {
+
+  }
+}
+.testimonials-users {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+    @media screen and (width > 767px) {
+      flex-direction: row;
+      gap: 22px;
+      margin-top: 60px;
+    }
+}
+.user-card {
+
+  @media screen and (width > 767px) {
+    width: 197px;
+    height: auto;
+  }
+}
+.user {
+
+  @media screen and (width > 767px) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+}
+
+.user::after {
+  content: '+';
+  display: block;
+  cursor: pointer;
+  @media screen and (width > 767px) {
+    display: none;
+  }
+}
+
+.user::after:click >.user-about {
+ display: block;
+}
+
+.user-p{
+  @media screen and (width > 767px) {
+    
+  }
+}
+.user-name {
+
+  @media screen and (width > 767px) {
+    color: $dark-beige;
+    font-family: Barlow Condensed;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+  }
+}
+.user-work {
+
+  @media screen and (width > 767px) {
+    color: $dark-beige;
+    font-family: Barlow Condensed;
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.14px;
+    text-transform: uppercase;
+  }
+}
+.user-about {
+  display: none;
+  @media screen and (width > 767px) {
+    display: block;
+    color: $dark-beige;
+    font-family: Barlow Condensed;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 13px */
+    letter-spacing: 0.2px;
+  }
+}
+
+summary::-webkit-details-marker {
+  /* Любые стили */
+}
+details summary::-webkit-details-marker {
+  display: none
+}
+/* Убираем стандартный маркер Firefox */
+details > summary {
+  list-style: none;
+}
+
+/* Добавляем собственный маркер для закрытого состояния */
+details summary:before {
+  content: '\002B';
+  margin-right: 7px;
+}
+
+/* Добавляем собственный маркер для открытого состояния */
+details[open] summary:before {
+  content: '\2212';
+}

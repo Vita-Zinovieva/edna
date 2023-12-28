@@ -1,0 +1,111 @@
+
+.burger-button {
+  position:fixed;
+  top: 10vh;
+  right: 12vh;
+  z-index: 9;
+  padding: 8px;
+  @media screen and (width > 767px) {
+    display: none;
+  }
+}
+/*this is where you can chand the color of the buttons*/
+.burger-button span{
+  width: 32px;
+  border: 1px solid  $light-brown;
+  background-color: $light-brown;
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-button.active span{
+  border-color: $light-brown;
+  background-color:$light-brown;
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: -02px;
+}
+
+.burger-bottom{
+  bottom: -02px;
+}
+/* make sure this has the same top as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+/*   transform: rotateZ(270deg); */
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same bottom as the burger button has padding*/
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+
+.burger-menu {
+    display: flex;
+    position: fixed;
+    top: 0vh;
+    //left:100vw;
+    right: -100vw;
+    bottom: 0vh;
+    background-color:$light-beige;
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 8;
+    transition:1s;
+    align-content:space-around;
+    justify-content:space-around;
+    flex-direction:column;
+   @media screen and (width > 767px) {
+    width: fit-content;
+    flex-direction: row;
+    position: relative;
+    background-color:$light-beige;
+    left: 0;
+    opacity: 1;
+    max-width: 900px;
+    min-width: 800px;
+    box-shadow: none;
+    gap: 3%;
+    margin: auto 0 auto auto;
+    padding: 0%;
+    }
+}
+.burger-menu.active{
+  left: 0vw;
+  right:0;
+  padding: 55px 0 30px 0;
+}
+.burger-menu a {
+  text-decoration: none;
+  display:block;
+  padding: 20px 15px;
+  text-align:center;
+  white-space:nowrap;
+  color: var(--edna-dark-beige, #8F7D65);
+  font-family: 'Cormorant Garamond';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  @media screen and (width > 767px) {
+    font-size: 16px;
+    padding: 0;
+  }
+}

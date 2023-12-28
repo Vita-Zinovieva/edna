@@ -1,0 +1,92 @@
+.hero {
+  display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 45% 10% 45%;
+    @media screen and (width > 767px) {
+      max-width: 1280px;
+      grid-template-rows: 50% 50%;
+    }
+  }
+
+
+.hero-content {
+display: grid;
+gap: 32px;
+justify-content: center;
+align-items: center;
+width: 320px;
+margin-left: 16px;
+/* position: absolute; */
+grid-column: 1/2;
+grid-row: 2/span 2;
+@media screen and (width > 767px) {
+  height: 376px;
+  grid-column: 2;
+  grid-row: 1/span 2;
+  width: 630px;
+  gap: 80px;
+  margin: auto;
+}
+}
+
+.hero-img {
+  width: 160px;
+  height: 230.27px;
+  grid-column: 2/span 1;
+  grid-row: span 2;
+  margin-left: auto;
+  @media screen and (width > 767px) {
+    width: auto;
+    height: auto;
+    grid-column: 1;
+    grid-row: span 1;
+    margin-right: 16%;
+    //margin-left: 0;
+  }
+}
+.primery-title{
+  width: 300px;
+  flex-shrink: 0;
+  
+  @media screen and (width > 767px) {
+    width: 630px;
+  }
+}
+
+
+.hero-button {
+  width: 256px;
+  height: 48px;
+  /* padding: 16px 72px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch; 
+  display: flex;*/
+  background: var(--edna-dark-red, #B31719);
+  color: $light-beige;
+  
+ // margin: auto;
+  // On click
+  // Navigate to: "Book Now";
+  // Animate: Instant;
+  //animation-duration: 0ms;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  font-family: Helvetica Neue;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  @media screen and (width > 767px) {  
+  width: 197px; 
+  font-size: 10px;
+  margin-left: auto;
+  padding: 0px;
+  cursor: pointer;
+  &:hover{
+    background: rgba(202, 57, 12, 0.77);
+    box-shadow: 5px 10px 40px 5px rgba(201, 72, 17, 0.41);
+  }
+}
+}

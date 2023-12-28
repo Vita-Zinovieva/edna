@@ -1,0 +1,76 @@
+.confidence {
+width: 100%;
+  @media screen and (width > 767px) {
+    max-width: 1280px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    //padding: 80px 0;
+  }
+}
+.confidence-wrapper {
+  //min-width: 320px;
+  height: 640px;
+  background-image: url(../images/3s1x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media screen and (width > 767px) {
+    display: flex;
+    width: 456px;
+    height: 686px;
+    background-size: contain;
+    background-image: url(../images/3s@2x.png);
+  }
+
+}
+.confidence-content {
+  width: 264px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 40px;
+  margin: auto;
+  padding-top: 200px;
+  @media screen and (width > 767px) {
+    margin: auto 0;
+    padding: 120px 40px 50px;
+    width: 375px;
+    gap: 40px;
+    
+  }
+}
+
+.confidence-title {
+  color: $light-beige;
+  font-family: Cormorant Garamond;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 38px; /* 105.556% */
+  text-transform: uppercase;
+
+  @media screen and (width > 767px) {
+    line-height: 62px; /* 96.875% */
+    font-size: 64px;
+  }
+}
+.confidence-text {
+  color: $light-beige;
+  font-family: Barlow Condensed;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+  @media screen and (width > 767px) {}
+}
+.confidence-photo {
+display: none;
+  @media screen and (width > 767px) {
+    display: block;
+   // padding: 80px;
+    width: 310px;
+    //height: 424px;
+    margin: auto;
+  }
+}
