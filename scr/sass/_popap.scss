@@ -1,8 +1,8 @@
 .popup-header {
   width: 100%;
-
+  padding: 0px 16px 25px;
   @media screen and (min-width: 768px) {
-    width: auto;
+    //width: auto;
     /* height: 120px; */
     display: flex;
     /* margin: 0px 0 25px 0; */
@@ -34,9 +34,10 @@
 } */
 
 .popup-header-list > li:not(:first-child) {
-  visibility: hidden;
+  display: none;
+  //visibility: hidden;
   @media screen and (min-width: 768px) {
-    visibility: visible;
+    display: block;
   }
 }
 
@@ -49,48 +50,63 @@
   line-height: normal;
   letter-spacing: 0.24px;
   text-transform: uppercase;
-  &:hover{
-    color: $dark-red;
-  }
-  @media screen and (min-width: 768px) {
+    &:hover{
+      color: $dark-red;
+    }
+      @media screen and (min-width: 768px) {
 
-  }
+      }
 }
 .popup-content {
   display: block;
+
+  @media screen and (min-width: 600px) {
+    display: flex;
+    gap: 20px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }
-
 }
 .popup-img{
   width: 320px;
   height: 484.848px;
   flex-shrink: 0;
   @media screen and (min-width: 768px) {
-  padding: 40px 0 70px 0;
-  width: 396px;
-  height: 600px;
+    padding: 40px 0 70px 0;
+    width: 396px;
+    height: 600px;
   }
 }
 .popup-content-text {
   display: flex;
-  width: 320px;
+  width: 290px;
   padding: 40px 16px;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  @media screen and (min-width: 768px) {
+  margin: auto;
+  @media screen and (min-width: 500px) {
     display: flex;
-    width: 627px;
+    width: 350px;
     flex-direction: column;
     //align-items: flex-end;
     gap: 40px;
     padding: 80px 0 70px 0;
+    margin: 0;
   }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      width: 627px;
+      flex-direction: column;
+      //align-items: flex-end;
+      gap: 40px;
+      padding: 80px 0 70px 0;
+      margin: 0;
+    }
 }
-.popup-p1{
+.popup-p1 {
   color: $dark-brown;
   font-family: Barlow Condensed;
   font-size: 12px;
@@ -100,7 +116,7 @@
   text-transform: uppercase;
 
 }
-.popup-p2{
+.popup-p2 {
   color: $dark-brown;
   text-align: justify;
   font-family: Barlow Condensed;
@@ -108,7 +124,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 18px */
-
 }
 .popup-h3,
 summary {
@@ -134,45 +149,65 @@ details > p{
   line-height: 150%; /* 18px */
   padding: 25px 25px 10px 25px;
 }
-
-.testimonials-users {
+@media screen and (min-width: 325px) {
+  .testimonials-users {
   display: flex;
   flex-direction: column;
   gap: 22px;
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-      gap: 22px;
-      margin-top: 60px;
-    }
+  margin-top: 60px;
+}
+}
+
+ 
+/* flex-direction: column;
+gap: 22px; */
+  @media screen and (min-width: 768px) {
+    .testimonials-users {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    margin-top: 60px;
+  }
 }
 .user-card {
-
+  width: 270px;
   @media screen and (min-width: 768px) {
     width: 197px;
     height: auto;
   }
 }
-.user {
 
-  @media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
+  .user {  
     display: flex;
     align-items: center;
     margin-bottom: 25px;
   }
 }
 
-.user::after {
-  content: '+';
-  display: block;
+.context {
+  display: none;
+
+  #contextToggle:checked ~ & {
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    display: block; }
+}
+
+.trigger {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  
+}
+
+/* .trigger-label {
   cursor: pointer;
   @media screen and (min-width: 768px) {
     display: none;
   }
-}
-
-.user::after:click >.user-about {
- display: block;
-}
+} */
 
 .user-p{
   @media screen and (min-width: 768px) {
@@ -206,9 +241,15 @@ details > p{
   }
 }
 .user-about {
-  display: none;
-  @media screen and (min-width: 768px) {
+ // display: none;
+
+  #contextToggle:checked ~ & {
     display: block;
+  }
+}
+.user-about {
+  @media screen and (min-width: 768px) {
+   // display: block;
     color: $dark-beige;
     font-family: Barlow Condensed;
     font-size: 10px;
@@ -223,18 +264,19 @@ details > p{
 details summary::-webkit-details-marker {
   display: none
 }
-/* Убираем стандартный маркер Firefox */
+
 details > summary {
   list-style: none;
 }
 
-/* Добавляем собственный маркер для закрытого состояния */
+
 details summary:before {
   content: '\002B';
   margin-right: 7px;
 }
 
-/* Добавляем собственный маркер для открытого состояния */
 details[open] summary:before {
   content: '\2212';
 }
+
+
