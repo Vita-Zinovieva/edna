@@ -2,24 +2,24 @@
   display: flex;
   width: 320px;
   padding: 48px 16px;
-  flex-direction: column;
   align-items: flex-start;
-  gap: 40px;
-  @media screen and (width > 767px) {
+  justify-content: space-between;
+  flex-direction: row;
+  @media screen and (min-width: 768px) {
     width: 1440px;
     padding: 80px;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    
   }
 }
 .footer-text {
   display: flex;
   height: 11px;
   gap:6px;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     height: 15px;
     gap:8px;
   }
@@ -28,14 +28,14 @@
   width: 2px;
   height: 11px;
   display: block;
-  background-color: #2D1B0D;
+  background-color: $primary;
   
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     width: 3px;
     height: 15px;}
 }
 .footer-copy {
-  color: #2D1B0D;
+  color: $primary;
   font-family: Cantarell;
   font-style: normal;
   font-size: 8px;
@@ -45,9 +45,10 @@
   text-transform: uppercase;
 }
 .footer-link {
-  width: 194px;
+  width: auto;
   height: auto;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
+    width: 194px;
     display: flex;
     justify-content: space-between;
   }
@@ -55,9 +56,9 @@
 }
 .footer-p {
   display: none;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: block;
-    color: #B31719;
+    color: $dark-red;
     font-family: Cantarell;
     font-size: 12px;
     font-style: normal;

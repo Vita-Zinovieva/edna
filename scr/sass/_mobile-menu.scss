@@ -5,7 +5,7 @@
   right: 12vh;
   z-index: 9;
   padding: 8px;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -70,7 +70,7 @@
     align-content:space-around;
     justify-content:space-around;
     flex-direction:column;
-   @media screen and (width > 767px) {
+   @media screen and (min-width: 768px) {
     width: fit-content;
     flex-direction: row;
     position: relative;
@@ -96,15 +96,15 @@
   padding: 20px 15px;
   text-align:center;
   white-space:nowrap;
-  color: var(--edna-dark-beige, #8F7D65);
+  color: $dark-beige;
   font-family: 'Cormorant Garamond';
-  font-size: 10px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     font-size: 16px;
     padding: 0;
   }

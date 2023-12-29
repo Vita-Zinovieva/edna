@@ -1,12 +1,13 @@
 .blog {
   display: flex;
   width: 100%;
-  padding: 40px 16px;
+  padding: 40px 0px;
   flex-direction: column;
   //align-items: flex-end;
   gap: 40px;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: flex;
+    max-width: 1280px;
     height: 580px;
     //padding: 120px 80px 0px 0px;
     padding: 0px ;
@@ -20,7 +21,7 @@
 
 .blog-content {
 
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     gap: 79px;
     align-items: center;
@@ -32,34 +33,52 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
- 
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     width: 630px;
     height: 420px;
     flex-shrink: 0px;
+    
+  }
 }
-  
+
+.blog-img img{
+  width: 106.478px;
+  height: 106.18px;
+  flex-shrink: 0;
+  @media screen and (min-width: 450px) {
+    width: 150px;
+    height: 150px;
+  }
+
+   
+  @media screen and (min-width: 768px) {
+    width: 210px;
+    height: 210px;
+    flex-shrink: 0;
+  }
 }
+
 .blog-blog {
   display: flex;
   //min-width: 320px;
   width: 100%;
   padding: 32px 16px;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
+  
   gap: 40px;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     //width: 650px;
     gap: 50px;
     padding: 0px;
+    justify-content: flex-end;
+  align-items: flex-start;
   }
 }
 .blog-text {
   display: flex;
   flex-direction: column;
   gap: 40px;
-    @media screen and (width > 767px) {
+    @media screen and (min-width: 768px) {
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
@@ -67,7 +86,7 @@
 }
 
 .blog-text p {
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     width: 236px;
   }
 }
@@ -80,10 +99,10 @@
   height: 48px;
   justify-content: center;
   align-items: center;
-  border: 1px solid #2D1B0D;
-  background: #F6F5F1;
+  border: 1px solid $primary;
+  background: $light-beige;
   gap: 8px;
-  color: #210803;
+  color: $dark-brown;
   font-family: Helvetica Neue;
   font-size: 12px;
   font-style: normal;
@@ -92,8 +111,16 @@
   letter-spacing: 0.24px;
   text-transform: uppercase;
   cursor: pointer;
-  @media screen and (width > 767px) {
+  margin: auto;
+  @media screen and (min-width: 768px) {
     width: 197px;
     font-size: 10px;
+    margin: 0;
+  }
+}
+.blog-name{
+  padding-left: 16px;
+  @media screen and (min-width: 768px) {
+    padding-left: 0px;
   }
 }

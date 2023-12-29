@@ -1,8 +1,8 @@
 .popup-header {
   width: 100%;
 
-  @media screen and (width > 767px) {
-    width: 100%;
+  @media screen and (min-width: 768px) {
+    width: auto;
     /* height: 120px; */
     display: flex;
     /* margin: 0px 0 25px 0; */
@@ -20,26 +20,28 @@
   flex-wrap: wrap;
   gap: 7%;
 
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     width: 100%;
     justify-content: space-between;
     gap: 5%;
   }
 }
 
-.popup-close-svg{
+/* .popup-close-svg{
   width: 32px;
   height: 32px;
   cursor: pointer;
-}
-.popup-header-items {
+} */
 
-  @media screen and (width > 767px) {
-
+.popup-header-list > li:not(:first-child) {
+  visibility: hidden;
+  @media screen and (min-width: 768px) {
+    visibility: visible;
   }
 }
+
 .popup-header-title {
-  color: #8F7D65;
+  color: $dark-beige;
   font-family: Cormorant Garamond;
   font-size: 12px;
   font-style: normal;
@@ -50,22 +52,23 @@
   &:hover{
     color: $dark-red;
   }
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
 
   }
 }
 .popup-content {
   display: block;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
   }
+
 }
 .popup-img{
   width: 320px;
   height: 484.848px;
   flex-shrink: 0;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
   padding: 40px 0 70px 0;
   width: 396px;
   height: 600px;
@@ -78,7 +81,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     width: 627px;
     flex-direction: column;
@@ -131,17 +134,12 @@ details > p{
   line-height: 150%; /* 18px */
   padding: 25px 25px 10px 25px;
 }
-.hero-button {
 
-  @media screen and (width > 767px) {
-
-  }
-}
 .testimonials-users {
   display: flex;
   flex-direction: column;
   gap: 22px;
-    @media screen and (width > 767px) {
+    @media screen and (min-width: 768px) {
       flex-direction: row;
       gap: 22px;
       margin-top: 60px;
@@ -149,14 +147,14 @@ details > p{
 }
 .user-card {
 
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     width: 197px;
     height: auto;
   }
 }
 .user {
 
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
@@ -167,7 +165,7 @@ details > p{
   content: '+';
   display: block;
   cursor: pointer;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -177,13 +175,13 @@ details > p{
 }
 
 .user-p{
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     
   }
 }
 .user-name {
 
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     color: $dark-beige;
     font-family: Barlow Condensed;
     font-size: 12px;
@@ -196,7 +194,7 @@ details > p{
 }
 .user-work {
 
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     color: $dark-beige;
     font-family: Barlow Condensed;
     font-size: 7px;
@@ -209,7 +207,7 @@ details > p{
 }
 .user-about {
   display: none;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     display: block;
     color: $dark-beige;
     font-family: Barlow Condensed;
@@ -221,9 +219,7 @@ details > p{
   }
 }
 
-summary::-webkit-details-marker {
-  /* Любые стили */
-}
+
 details summary::-webkit-details-marker {
   display: none
 }

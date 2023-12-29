@@ -1,28 +1,34 @@
 .services {
   width: 100%;
-  padding: 40px;
+  padding: 40px 16px;
   height: 118px;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     padding: 0 0 80px;
     height: auto;
   }
 }
+.services-box {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    max-width: 1280px;
+  }
+}
 .servic-name {
-  color: var(--EDNA-Dark-Red, #B31719);
+  color: $dark-red;
   font-family: Cantarell;
   font-size: 36px;
   font-style: normal;
   font-weight: 300;
   line-height: 38px; /* 105.556% */
   text-transform: uppercase;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     font-size: 12px;
   }
 }
 .services-content {
   width: 100%;
   height: auto;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     width: 848px;
     display: flex;
     gap: 20px;
@@ -32,7 +38,7 @@
 
 .services-img-container {
   padding: 20px 64px;
-  @media screen and (width > 767px) {
+  @media screen and (min-width: 768px) {
     width: 25%;
     padding: 0;
   }
@@ -41,7 +47,7 @@
   width: 100%;
 }
 .services-gallery-title {
-  color: #210803;
+  color: $dark-brown;
   font-family: Cormorant Garamond;
   font-size: 12px;
   font-style: normal;
